@@ -91,11 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         navLinks.forEach(link => {
-            link.classList.remove('text-brand-500', 'border-brand-500/20');
-            link.classList.add('text-slate-350');
+            link.classList.remove('text-brand-500');
+            link.classList.add('text-slate-600', 'dark:text-slate-400');
             if (link.getAttribute('data-section') === currentSectionId) {
                 link.classList.add('text-brand-500');
-                link.classList.remove('text-slate-350');
+                link.classList.remove('text-slate-600', 'dark:text-slate-400');
             }
         });
     });
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Block Save (Ctrl+S, Cmd+S), Print (Ctrl+P, Cmd+P), View Source (Ctrl+U, Cmd+U)
         if (isCtrlOrCmd && (e.key === 's' || e.key === 'p' || e.key === 'u' || e.key === 'S' || e.key === 'P' || e.key === 'U')) {
             e.preventDefault();
-            alert('Akses dinonaktifkan: Menyimpan, menyalin, atau mencetak dokumen ini tidak diizinkan.');
+            alert('Access denied: Saving, copying, or printing this document is not allowed.');
             return;
         }
 
@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
         docViewerModal.addEventListener('copy', (e) => {
             e.preventDefault();
             try {
-                e.clipboardData.setData('text/plain', 'Penyalinan konten dinonaktifkan.');
+                e.clipboardData.setData('text/plain', 'Content copying is disabled.');
             } catch (err) {}
         });
     }

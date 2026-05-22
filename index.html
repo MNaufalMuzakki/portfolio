@@ -138,7 +138,7 @@
         }
     </style>
 </head>
-<body class="bg-slate-950 dark:bg-slate-950 text-slate-200 dark:text-slate-200 min-h-screen font-sans transition-colors duration-300 relative overflow-x-hidden">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 min-h-screen font-sans transition-colors duration-300 relative overflow-x-hidden">
     
     <!-- Background Glow Orbs for Premium Vibe (Hidden in light mode via JS or Tailwind opacity check) -->
     <div class="no-print absolute top-10 left-10 w-[300px] h-[300px] bg-brand-500 glow-orb dark:block hidden"></div>
@@ -150,36 +150,36 @@
     ========================================== -->
     <header class="no-print fixed top-0 left-0 w-full z-50 transition-all duration-300" id="mainHeader">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="backdrop-blur-md bg-slate-950/70 dark:bg-slate-950/70 border border-slate-800/80 rounded-2xl px-6 py-3 flex items-center justify-between shadow-lg">
+            <div class="backdrop-blur-md bg-white/70 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800/80 rounded-2xl px-6 py-3 flex items-center justify-between shadow-lg">
                 <!-- Brand Logo / Monogram -->
                 <a href="#hero" class="flex items-center gap-2 group">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-electric-500 flex items-center justify-center font-extrabold text-white text-lg shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">
-                        <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                         </svg>
                     </div>
-                    <span class="font-extrabold text-sm sm:text-base tracking-wide text-slate-100 group-hover:text-brand-500 transition-colors duration-300"><span class="text-brand-500">Muhammad</span> Naufal<span class="text-brand-500"> Muzakki</span></span>
+                    <span class="font-extrabold text-sm sm:text-base tracking-wide text-slate-800 dark:text-slate-100 group-hover:text-brand-500 transition-colors duration-300"><span class="text-brand-500">Muhammad</span> Naufal<span class="text-brand-500"> Muzakki</span></span>
                 </a>
 
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="#hero" class="nav-link text-sm font-semibold text-slate-350 hover:text-brand-500 transition-colors duration-300" data-section="hero">Home</a>
-                    <a href="#skills" class="nav-link text-sm font-semibold text-slate-350 hover:text-brand-500 transition-colors duration-300" data-section="skills">Skills</a>
-                    <a href="#education" class="nav-link text-sm font-semibold text-slate-350 hover:text-brand-500 transition-colors duration-300" data-section="education">Education</a>
-                    <a href="#portfolio" class="nav-link text-sm font-semibold text-slate-350 hover:text-brand-500 transition-colors duration-300" data-section="portfolio">Portfolio</a>
-                    <a href="#contact" class="nav-link text-sm font-semibold text-slate-350 hover:text-brand-500 transition-colors duration-300" data-section="contact">Contact</a>
+                    <a href="#hero" class="nav-link text-sm font-semibold text-slate-600 dark:text-slate-350 hover:text-brand-500 dark:hover:text-brand-500 transition-colors duration-300" data-section="hero">Home</a>
+                    <a href="#skills" class="nav-link text-sm font-semibold text-slate-600 dark:text-slate-350 hover:text-brand-500 dark:hover:text-brand-500 transition-colors duration-300" data-section="skills">Skills</a>
+                    <a href="#education" class="nav-link text-sm font-semibold text-slate-600 dark:text-slate-350 hover:text-brand-500 dark:hover:text-brand-500 transition-colors duration-300" data-section="education">Education</a>
+                    <a href="#portfolio" class="nav-link text-sm font-semibold text-slate-600 dark:text-slate-350 hover:text-brand-500 dark:hover:text-brand-500 transition-colors duration-300" data-section="portfolio">Portfolio</a>
+                    <a href="#contact" class="nav-link text-sm font-semibold text-slate-600 dark:text-slate-350 hover:text-brand-500 dark:hover:text-brand-500 transition-colors duration-300" data-section="contact">Contact</a>
                 </nav>
 
                 <!-- Actions: Theme Toggle & Mobile Menu Btn -->
                 <div class="flex items-center gap-3">
                     <!-- Theme Toggle Button -->
-                    <button id="themeToggle" class="w-11 h-11 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-450 hover:text-brand-500 hover:border-brand-500/30 active:scale-95 transition-all duration-300" aria-label="Toggle Theme">
-                        <i class="fa-solid fa-moon dark:hidden text-lg text-indigo-400"></i>
+                    <button id="themeToggle" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-400 hover:text-brand-500 hover:border-brand-500/30 active:scale-95 transition-all duration-300" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon dark:hidden text-lg text-indigo-500"></i>
                         <i class="fa-solid fa-sun hidden dark:block text-lg text-amber-400"></i>
                     </button>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobileMenuBtn" class="md:hidden w-11 h-11 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-350 hover:text-brand-500 active:scale-95 transition-all duration-300" aria-label="Open Menu">
+                    <button id="mobileMenuBtn" class="md:hidden w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-350 hover:text-brand-500 active:scale-95 transition-all duration-300" aria-label="Open Menu">
                         <i class="fa-solid fa-bars text-base" id="menuIcon"></i>
                     </button>
                 </div>
@@ -188,12 +188,12 @@
 
         <!-- Mobile Navigation Menu (Dropdown) -->
         <div class="md:hidden hidden px-4 sm:px-6 mb-4" id="mobileMenu">
-            <div class="bg-slate-950/95 border border-slate-800/90 rounded-2xl p-4 flex flex-col gap-3 shadow-xl backdrop-blur-lg">
-                <a href="#hero" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-350 hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Home</a>
-                <a href="#skills" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-350 hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Skills</a>
-                <a href="#education" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-350 hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Education</a>
-                <a href="#portfolio" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-350 hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Portfolio</a>
-                <a href="#contact" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-350 hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Contact</a>
+            <div class="bg-white/95 dark:bg-slate-950/95 border border-slate-200 dark:border-slate-800/90 rounded-2xl p-4 flex flex-col gap-3 shadow-xl backdrop-blur-lg">
+                <a href="#hero" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-350 hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Home</a>
+                <a href="#skills" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-350 hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Skills</a>
+                <a href="#education" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-350 hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Education</a>
+                <a href="#portfolio" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-350 hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Portfolio</a>
+                <a href="#contact" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-350 hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Contact</a>
             </div>
         </div>
     </header>
@@ -213,18 +213,18 @@
                 </div>
 
                 <!-- Headline & Titles -->
-                <h1 class="text-4xl sm:text-5xl lg:text-4xl font-black text-slate-100 tracking-tight leading-tight">
+                <h1 class="text-4xl sm:text-5xl lg:text-4xl font-black text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
                 | <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 via-teal-400 to-electric-500">Muhammad Naufal Muzakki</span> |
                 </h1>
                 
-                <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-slate-300 mt-3 font-mono">
+                <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-slate-700 dark:text-slate-300 mt-3 font-mono">
                     <span class="text-brand-500">&lt;</span>
                     Multimedia Engineering Technology Student
                     <span class="text-brand-500">&gt;</span>
                 </h2>
 
                 <!-- Main Summary text -->
-                <p class="text-sm sm:text-base text-slate-350 mt-6 leading-relaxed max-w-2xl text-justify">
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-350 mt-6 leading-relaxed max-w-2xl text-justify">
                     A Multimedia Engineering student specializing in Web Development, Game Development, and Videography. These technical skills are enhanced by strong soft skills in teamwork, project coordination, and timeline management, proven across class projects, competitions, and leadership roles in campus organizations. This experience enables me to deliver end-to-end projects efficiently, utilizing AI tools to streamline execution. With a solid balance of system logic, user experience focus, and clear team communication, I am equipped to excel in collaborative Full-stack or Multimedia Engineer Developer roles.
                 </p>
 
@@ -242,7 +242,7 @@
                 <div class="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] rounded-full p-2 flex items-center justify-center">
                     
                     <!-- Glowing background orbits -->
-                    <div class="absolute inset-0 rounded-full border border-dashed border-slate-800/80 animate-spin-slow"></div>
+                    <div class="absolute inset-0 rounded-full border border-dashed border-slate-300 dark:border-slate-800/80 animate-spin-slow"></div>
                     <div class="absolute -inset-4 rounded-full border border-dashed border-brand-500/20 animate-spin-slow" style="animation-direction: reverse; animation-duration: 20s;"></div>
                     
                     <!-- Neon Glow Outer Rings -->
@@ -266,13 +266,13 @@
                     </div>
 
                     <!-- Floating Floating Tech Badges on Orbit paths -->
-                    <div class="no-print absolute top-0 right-4 w-12 h-12 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center text-brand-500 shadow-lg animate-float z-20 hover:scale-110 active:scale-95 transition-all duration-300" style="animation-delay: 0s;" title="Web Developer">
+                    <div class="no-print absolute top-0 right-4 w-12 h-12 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl flex items-center justify-center text-brand-500 shadow-lg animate-float z-20 hover:scale-110 active:scale-95 transition-all duration-300" style="animation-delay: 0s;" title="Web Developer">
                         <i class="fa-solid fa-code text-base"></i>
                     </div>
-                    <div class="no-print absolute bottom-4 left-0 w-12 h-12 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center text-electric-500 shadow-lg animate-float z-20 hover:scale-110 active:scale-95 transition-all duration-300" style="animation-delay: 2s;" title="Game Developer">
+                    <div class="no-print absolute bottom-4 left-0 w-12 h-12 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl flex items-center justify-center text-electric-500 shadow-lg animate-float z-20 hover:scale-110 active:scale-95 transition-all duration-300" style="animation-delay: 2s;" title="Game Developer">
                         <i class="fa-solid fa-gamepad text-base"></i>
                     </div>
-                    <div class="no-print absolute bottom-12 right-2 w-12 h-12 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center text-teal-400 shadow-lg animate-float z-20 hover:scale-110 active:scale-95 transition-all duration-300" style="animation-delay: 4s;" title="Videography">
+                    <div class="no-print absolute bottom-12 right-2 w-12 h-12 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl flex items-center justify-center text-teal-400 shadow-lg animate-float z-20 hover:scale-110 active:scale-95 transition-all duration-300" style="animation-delay: 4s;" title="Videography">
                         <i class="fa-solid fa-clapperboard text-base"></i>
                     </div>
                 </div>
@@ -282,10 +282,10 @@
         <!-- ==========================================
           B. TECHNICAL SKILL STACK (HARD SKILLS)
         ========================================== -->
-        <section id="skills" class="py-10 md:py-12 border-t border-slate-900">
+        <section id="skills" class="py-10 md:py-12 border-t border-slate-200 dark:border-slate-900">
             <!-- Section Header -->
             <div class="flex flex-col items-start mb-8">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-100 tracking-tight mt-2">Skills & Expertise</h2>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 dark:text-slate-100 tracking-tight mt-2">Skills & Expertise</h2>
                 <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-electric-500 rounded-full mt-3"></div>
             </div>
 
@@ -293,116 +293,116 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- Skill Group 1: Web Development -->
-                <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 hover:border-brand-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-brand-500/5">
+                <div class="card-style bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-6 hover:border-brand-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-brand-500/5">
                     <div class="w-11 h-11 rounded-xl bg-brand-500/10 text-brand-500 border border-brand-500/20 flex items-center justify-center mb-5">
                         <i class="fa-solid fa-earth-americas text-lg"></i>
                     </div>
-                    <h3 class="text-base font-extrabold text-slate-100 uppercase tracking-wide">Web Development</h3>
-                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 mb-5">Building responsive, secure, and database-driven web applications.</p>
+                    <h3 class="text-base font-extrabold text-slate-900 dark:text-slate-100 uppercase tracking-wide">Web Development</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1.5 mb-5">Building responsive, secure, and database-driven web applications.</p>
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <!-- PHP -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
                             <i class="fa-brands fa-php text-indigo-400 text-sm"></i> PHP
                         </span>
                         <!-- Laravel -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
                             <i class="fa-brands fa-laravel text-red-500 text-sm"></i> Laravel
                         </span>
                         <!-- HTML5 -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
                             <i class="fa-brands fa-html5 text-orange-500 text-sm"></i> HTML
                         </span>
                         <!-- CSS3 -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
                             <i class="fa-brands fa-css3-alt text-blue-500 text-sm"></i> CSS
                         </span>
                         <!-- JS -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
                             <i class="fa-brands fa-square-js text-yellow-500 text-sm"></i> JS
                         </span>
                         <!-- MySQL -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
                             <i class="fa-solid fa-database text-blue-400 text-sm"></i> MySQL
                         </span>
                         <!-- PostgreSQL -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
                             <i class="fa-solid fa-database text-sky-500 text-sm"></i> PostgreSQL
                         </span>
                     </div>
                 </div>
 
                 <!-- Skill Group 2: Game Development -->
-                <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 hover:border-electric-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-electric-500/5">
+                <div class="card-style bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-6 hover:border-electric-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-electric-500/5">
                     <div class="w-11 h-11 rounded-xl bg-electric-500/10 text-electric-500 border border-electric-500/20 flex items-center justify-center mb-5">
                         <i class="fa-solid fa-gamepad text-lg"></i>
                     </div>
-                    <h3 class="text-base font-extrabold text-slate-100 uppercase tracking-wide">Game Development</h3>
-                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 mb-5">Crafting engaging gameplay mechanics, interactive logic, and visual storytelling.</p>
+                    <h3 class="text-base font-extrabold text-slate-900 dark:text-slate-100 uppercase tracking-wide">Game Development</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1.5 mb-5">Crafting engaging gameplay mechanics, interactive logic, and visual storytelling.</p>
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <!-- Unity/C# -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
-                            <i class="fa-brands fa-unity text-slate-100 text-sm"></i> Unity / C#
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                            <i class="fa-brands fa-unity text-slate-800 dark:text-slate-100 text-sm"></i> Unity / C#
                         </span>
                         <!-- Ren'Py -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
                             <i class="fa-solid fa-book-open text-purple-400 text-sm"></i> Ren'Py
                         </span>
                     </div>
                 </div>
 
                 <!-- Skill Group 3: Multimedia & Creative -->
-                <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 hover:border-brand-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-brand-500/5">
+                <div class="card-style bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-6 hover:border-brand-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-brand-500/5">
                     <div class="w-11 h-11 rounded-xl bg-brand-500/10 text-brand-500 border border-brand-500/20 flex items-center justify-center mb-5">
                         <i class="fa-solid fa-photo-film text-lg"></i>
                     </div>
-                    <h3 class="text-base font-extrabold text-slate-100 uppercase tracking-wide">Multimedia & Creative</h3>
-                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 mb-5">Designing premium UI/UX layouts, high-quality video production, and assets.</p>
+                    <h3 class="text-base font-extrabold text-slate-900 dark:text-slate-100 uppercase tracking-wide">Multimedia & Creative</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1.5 mb-5">Designing premium UI/UX layouts, high-quality video production, and assets.</p>
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <!-- Premiere -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
                             <i class="fa-solid fa-file-video text-purple-500 text-sm"></i> Premiere Pro
                         </span>
                         <!-- After Effects -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
                             <i class="fa-solid fa-wand-magic-sparkles text-indigo-400 text-sm"></i> After Effects
                         </span>
                         <!-- CapCut -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
                             <i class="fa-solid fa-video text-cyan-400 text-sm"></i> CapCut
                         </span>
                         <!-- Figma -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
                             <i class="fa-brands fa-figma text-orange-400 text-sm"></i> Figma
                         </span>
                     </div>
                 </div>
 
                 <!-- Skill Group 4: Management & Supporting -->
-                <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 hover:border-electric-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-electric-500/5">
+                <div class="card-style bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-6 hover:border-electric-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-electric-500/5">
                     <div class="w-11 h-11 rounded-xl bg-electric-500/10 text-electric-500 border border-electric-500/20 flex items-center justify-center mb-5">
                         <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
                     </div>
-                    <h3 class="text-base font-extrabold text-slate-100 uppercase tracking-wide">Management & Supporting</h3>
-                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 mb-5">Coordinating team workflows, project timelines, and utilizing supporting tools.</p>
+                    <h3 class="text-base font-extrabold text-slate-900 dark:text-slate-100 uppercase tracking-wide">Management & Supporting</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1.5 mb-5">Coordinating team workflows, project timelines, and utilizing supporting tools.</p>
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <!-- MS Excel -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
                             <i class="fa-regular fa-file-excel text-green-600 text-sm"></i> MS Excel
                         </span>
                         <!-- MS Word -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
                             <i class="fa-regular fa-file-word text-blue-500 text-sm"></i> MS Word
                         </span>
                         <!-- AI Tools -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
                             <i class="fa-solid fa-robot text-teal-400 text-sm"></i> AI Tools
                         </span>
                         <!-- Testing -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
                             <i class="fa-solid fa-bug text-red-400 text-sm"></i> Testing
                         </span>
                         <!-- Teamwork & Leadership -->
-                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                        <span class="badge-style bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
                             <i class="fa-solid fa-users text-blue-400 text-sm"></i> Teamwork & Leadership
                         </span>
                     </div>
@@ -414,10 +414,10 @@
         <!-- ==========================================
           D. EDUCATION & CERTIFICATIONS (BNSP SPOTLIGHT)
         ========================================== -->
-        <section id="education" class="py-10 md:py-12 border-t border-slate-900">
+        <section id="education" class="py-10 md:py-12 border-t border-slate-200 dark:border-slate-900">
             <!-- Section Header -->
             <div class="flex flex-col items-start mb-8">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-100 tracking-tight mt-2">Education & Certifications</h2>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 dark:text-slate-100 tracking-tight mt-2">Education & Certifications</h2>
                 <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-electric-500 rounded-full mt-3"></div>
             </div>
 
@@ -430,53 +430,53 @@
                     
                     <div class="flex-grow flex flex-col gap-6 justify-between">
                         <!-- Telkom University Card -->
-                        <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-brand-500/30 transition-all duration-300 flex-1 flex flex-col justify-between">
+                        <div class="card-style bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-5 hover:border-brand-500/30 transition-all duration-300 flex-1 flex flex-col justify-between hover:shadow-lg hover:shadow-brand-500/5">
                             <div>
                                 <div class="flex items-center gap-4 mb-3">
                                     <div class="w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center text-sm font-black flex-shrink-0">
                                         Tel-U
                                     </div>
                                     <div>
-                                        <h4 class="text-base font-extrabold text-slate-100">Telkom University</h4>
-                                        <p class="text-xs text-slate-400">Juli 2023 - Present</p>
+                                        <h4 class="text-base font-extrabold text-slate-900 dark:text-slate-100">Telkom University</h4>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">July 2023 - Present</p>
                                     </div>
                                 </div>
-                                <p class="text-sm font-bold text-slate-200">Applied D4 Bachelor - Terapan Teknologi Rekayasa Multimedia (TRM)</p>
+                                <p class="text-sm font-bold text-slate-800 dark:text-slate-200">Applied Bachelor's Degree (D4) - Multimedia Engineering Technology</p>
                             </div>
                             
                             <!-- Mini scores widget -->
-                            <div class="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-slate-850 text-center">
-                                <a href="https://drive.google.com/file/d/1jlXrOmKrob637b5eHfDO_yVWFnq9zrrZ/view?usp=drive_link" target="_blank" class="bg-slate-950 p-2.5 rounded-lg border border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center">
-                                    <span class="block text-sm sm:text-base font-black text-brand-400 group-hover:text-brand-350 transition-colors">3.95</span>
-                                    <span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider block mt-0.5">GPA / IPK</span>
+                            <div class="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-slate-200 dark:border-slate-850 text-center">
+                                <a href="#" class="view-doc-btn bg-slate-50 dark:bg-slate-950 p-2.5 rounded-lg border border-slate-200 dark:border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center" data-doc="transcript" data-pages="4" data-title="Academic Transcript">
+                                    <span class="block text-sm sm:text-base font-black text-brand-650 dark:text-brand-400 group-hover:text-brand-500 transition-colors">3.95</span>
+                                    <span class="text-[10px] font-mono text-slate-500 dark:text-slate-500 uppercase tracking-wider block mt-0.5">GPA</span>
                                 </a>
-                                <a href="https://drive.google.com/file/d/1elpXLMgUG90eMd9A5nBRZ_5Tby4pN1NQ/view?usp=drive_link" target="_blank" class="bg-slate-950 p-2.5 rounded-lg border border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center">
-                                    <span class="block text-sm sm:text-base font-black text-brand-400 group-hover:text-brand-350 transition-colors">537</span>
-                                    <span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider block mt-0.5">EPRT</span>
+                                <a href="#" class="view-doc-btn bg-slate-50 dark:bg-slate-950 p-2.5 rounded-lg border border-slate-200 dark:border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center" data-doc="eprt" data-pages="3" data-title="EPRT Certificate">
+                                    <span class="block text-sm sm:text-base font-black text-brand-650 dark:text-brand-400 group-hover:text-brand-500 transition-colors">537</span>
+                                    <span class="text-[10px] font-mono text-slate-500 dark:text-slate-500 uppercase tracking-wider block mt-0.5">EPRT</span>
                                 </a>
-                                <a href="https://drive.google.com/file/d/152FsaXSpO6aZ-yax1m6-eiDCMFAdLd6o/view?usp=drive_link" target="_blank" class="bg-slate-950 p-2.5 rounded-lg border border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center">
-                                    <span class="block text-sm sm:text-base font-black text-brand-400 group-hover:text-brand-350 transition-colors">160</span>
-                                    <span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider block mt-0.5">TAK Score</span>
+                                <a href="#" class="view-doc-btn bg-slate-50 dark:bg-slate-950 p-2.5 rounded-lg border border-slate-200 dark:border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center" data-doc="tak" data-pages="6" data-title="TAK Score Log">
+                                    <span class="block text-sm sm:text-base font-black text-brand-650 dark:text-brand-400 group-hover:text-brand-500 transition-colors">160</span>
+                                    <span class="text-[10px] font-mono text-slate-500 dark:text-slate-500 uppercase tracking-wider block mt-0.5">TAK Score</span>
                                 </a>
                             </div>
                         </div>
 
                         <!-- High School Card -->
-                        <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-electric-500/30 transition-all duration-300 flex-1 flex flex-col justify-between">
+                        <div class="card-style bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-5 hover:border-electric-500/30 transition-all duration-300 flex-1 flex flex-col justify-between hover:shadow-lg hover:shadow-electric-500/5">
                             <div>
                                 <div class="flex items-center gap-4 mb-3">
                                     <div class="w-10 h-10 rounded-lg bg-electric-500/10 border border-electric-500/20 text-electric-500 flex items-center justify-center text-sm font-black flex-shrink-0">
                                         HS
                                     </div>
                                     <div>
-                                        <h4 class="text-base font-extrabold text-slate-100">SMA Negeri 12 Bandung</h4>
-                                        <p class="text-xs text-slate-400">Juli 2020 - Mei 2023</p>
+                                        <h4 class="text-base font-extrabold text-slate-900 dark:text-slate-100">SMA Negeri 12 Bandung</h4>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">July 2020 - May 2023</p>
                                     </div>
                                 </div>
-                                <p class="text-sm font-bold text-slate-200">High School - MIPA Science Major</p>
+                                <p class="text-sm font-bold text-slate-800 dark:text-slate-200">High School - MIPA Science Major</p>
                             </div>
-                            <div class="flex items-center gap-2 mt-3 text-xs text-slate-400 font-medium">
-                                <span class="bg-slate-950 border border-slate-850 px-2.5 py-0.5 rounded text-xs font-bold text-slate-350">Final Grade: 89.81</span>
+                            <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 dark:text-slate-400 font-medium">
+                                <span class="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-0.5 rounded text-xs font-bold text-slate-700 dark:text-slate-300">Final Grade: 89.81</span>
                             </div>
                         </div>
                     </div>
@@ -484,10 +484,10 @@
 
                 <!-- Certification Spotlight column (Right - Section D Constraint) -->
                 <div class="lg:col-span-7 flex flex-col lg:h-full">
-                    <h3 class="text-sm font-black uppercase text-slate-500 tracking-wider mb-2">Professional Credential</h3>
+                    <h3 class="text-sm font-black uppercase text-slate-550 dark:text-slate-500 tracking-wider mb-2">Professional Credential</h3>
                     
                     <!-- Spotlight Card with Neon Glow -->
-                    <div class="card-style bg-gradient-to-tr from-brand-500/10 to-electric-500/10 backdrop-blur-md border border-brand-500/20 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-brand-500/40 shadow-lg shadow-brand-500/5 flex-grow flex flex-col justify-between lg:h-[calc(100%-2rem)]">
+                    <div class="card-style bg-white dark:bg-slate-900/10 backdrop-blur-md border border-slate-200 dark:border-brand-500/20 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-brand-500/40 hover:shadow-lg hover:shadow-brand-500/5 flex-grow flex flex-col justify-between lg:h-[calc(100%-2rem)]">
                         
                         <!-- Glowing blur ball background in card -->
                         <div class="absolute -right-8 -top-8 w-24 h-24 bg-brand-500 blur-2xl opacity-20 pointer-events-none"></div>
@@ -495,49 +495,49 @@
                         <!-- Main Content wrapper -->
                         <div class="flex-grow flex flex-col">
                             <!-- Header badge/logo row -->
-                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between border-b border-slate-800/80 pb-5 mb-5">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between border-b border-slate-200 dark:border-slate-800/80 pb-5 mb-5">
                                 <div class="flex items-center gap-3">
                                     <!-- Official Gold-looking Emblem (Constraint D) -->
                                     <div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-amber-400 to-yellow-600 flex items-center justify-center text-slate-950 shadow-md flex-shrink-0 animate-float select-none">
                                         <i class="fa-solid fa-award text-2xl"></i>
                                     </div>
                                     <div>
-                                        <h4 class="text-xs font-mono font-bold tracking-wider text-amber-500 uppercase">OFFICIAL CERTIFICATION</h4>
-                                        <h3 class="text-base sm:text-lg font-extrabold text-slate-100 mt-0.5">BNSP Competency Certificate</h3>
+                                        <h4 class="text-xs font-mono font-bold tracking-wider text-amber-600 dark:text-amber-500 uppercase">OFFICIAL CERTIFICATION</h4>
+                                        <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-slate-100 mt-0.5">BNSP Competency Certificate</h3>
                                     </div>
                                 </div>
                                 <div class="no-print font-sans">
-                                    <a href="https://drive.google.com/file/d/1wSKmVVNs0y6e0vapsYyttoCClpVxN-01/view?usp=drive_link" target="_blank" class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold text-slate-200 hover:border-brand-500/30 hover:text-brand-500 transition-all duration-300 active:scale-95 flex items-center gap-1.5">
+                                    <a href="#" class="view-doc-btn px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200 hover:border-brand-500/30 hover:text-brand-500 transition-all duration-300 active:scale-95 flex items-center gap-1.5" data-doc="certificate" data-pages="2" data-title="BNSP Multimedia Certificate">
                                         <i class="fa-regular fa-image text-brand-500"></i> View Certificate
                                     </a>
                                 </div>
                             </div>
 
                             <!-- Certificate Body Details -->
-                            <h4 class="text-lg font-black text-slate-100 leading-snug">
+                            <h4 class="text-lg font-black text-slate-900 dark:text-slate-100 leading-snug">
                                 Desainer Multimedia Madya (Intermediate Multimedia Designer)
                             </h4>
-                            <p class="text-sm sm:text-base font-bold text-slate-300 mt-1.5">
+                            <p class="text-sm sm:text-base font-bold text-slate-700 dark:text-slate-300 mt-1.5">
                                 Issued by **Badan Nasional Sertifikasi Profesi (BNSP)** through LSP Teknologi Digital.
                             </p>
-                            <p class="text-xs font-mono text-slate-400 mt-1">
+                            <p class="text-xs font-mono text-slate-500 dark:text-slate-400 mt-1">
                                 Registration ID: MTM 1565 32403 2025 | Valid: July 2025 - July 2028
                             </p>
-                            <p class="text-base text-slate-300 mt-4 leading-relaxed text-justify">
+                            <p class="text-base text-slate-600 dark:text-slate-300 mt-4 leading-relaxed text-justify">
                                 This national certification officially validates proficiency in multimedia asset production, graphic editing workflows, audio-visual storytelling scripts, and operational software usage according to formal industrial frameworks.
                             </p>
                         </div>
                         
                         <!-- Competency Areas as Pill Badges -->
                         <div class="mt-5 flex flex-wrap gap-2">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950/60 border border-slate-800 text-xs font-semibold text-slate-350 hover:border-brand-500/20 transition-all duration-300 select-none">
-                                <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span> Riset Kreatif & Desain
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:border-brand-500/20 transition-all duration-300 select-none">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span> Creative Research & Design
                             </span>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950/60 border border-slate-800 text-xs font-semibold text-slate-350 hover:border-brand-500/20 transition-all duration-300 select-none">
-                                <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span> Produksi Audio-Visual
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:border-brand-500/20 transition-all duration-300 select-none">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span> Audio-Visual Production
                             </span>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950/60 border border-slate-800 text-xs font-semibold text-slate-350 hover:border-brand-500/20 transition-all duration-300 select-none">
-                                <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span> Pemrograman Interaktif
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:border-brand-500/20 transition-all duration-300 select-none">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span> Interactive Programming
                             </span>
                         </div>
                     </div>
@@ -546,13 +546,16 @@
             </div>
         </section>
 
+            </div>
+        </section>
+
         <!-- ==========================================
           E. PROJECTS PORTFOLIO (THE WRAPPER)
         ========================================== -->
-        <section id="portfolio" class="py-10 md:py-12 border-t border-slate-900">
+        <section id="portfolio" class="py-10 md:py-12 border-t border-slate-200 dark:border-slate-900">
             <!-- Section Header -->
             <div class="mb-8">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-100 tracking-tight">Projects Portfolio</h2>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 dark:text-slate-100 tracking-tight">Projects Portfolio</h2>
                 <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-electric-500 rounded-full mt-3"></div>
             </div>
 
@@ -560,17 +563,17 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsGrid">
                 
                 <!-- Project 1: Full-stack Web -->
-                <div class="card-style bg-slate-900/40 border border-slate-800/85 rounded-2xl overflow-hidden hover:border-brand-500/30 transition-all duration-300 flex flex-col group hover:shadow-lg">
+                <div class="card-style bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/85 rounded-2xl overflow-hidden hover:border-brand-500/30 transition-all duration-300 flex flex-col group hover:shadow-lg">
                     <!-- Project Thumbnail Wrapper -->
                     <div class="relative h-48 bg-slate-950 overflow-hidden flex items-center justify-center">
                         
                         <!-- [USER_EDIT] Change value of src="web_thumbnail.jpg" below when image is ready -->
-                        <img src="web_thumbnail.jpg" alt="Tel-U Academics Admin Portal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                        <img src="web_thumbnail.jpg" alt="Web Development Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                         
                         <!-- Elegant geometric fallback design -->
-                        <div class="hidden w-full h-full bg-gradient-to-br from-brand-500/10 to-slate-950 flex flex-col items-center justify-center p-6 text-center select-none">
+                        <div class="hidden w-full h-full bg-gradient-to-br from-brand-500/10 to-slate-900 dark:to-slate-950 flex flex-col items-center justify-center p-6 text-center select-none">
                             <i class="fa-solid fa-window-restore text-4xl text-brand-500/40 mb-2 animate-float"></i>
-                            <span class="font-bold text-slate-350 text-xs sm:text-sm tracking-wider font-mono">LARAVEL FULL-STACK PORTAL</span>
+                            <span class="font-bold text-slate-300 dark:text-slate-350 text-xs sm:text-sm tracking-wider font-mono">WEB DEVELOPMENT</span>
                         </div>
                         
                         <!-- Project Tag badge overlay -->
@@ -581,24 +584,23 @@
 
                     <!-- Project Info -->
                     <div class="p-5 flex flex-col flex-grow">
-                        <h3 class="text-base sm:text-lg font-extrabold text-slate-100 group-hover:text-brand-500 transition-colors duration-300">Room Booking & Event Scheduler Portal</h3>
-                        <p class="text-sm text-slate-300 mt-2 leading-relaxed line-clamp-3 text-justify">
-                            A full-stack web application for managing room bookings and event scheduling, built with Laravel and a relational MySQL database.
+                        <p class="text-sm text-slate-650 dark:text-slate-350 leading-relaxed text-justify">
+                            Web development specializing in organizational information systems and event vendor/tenant platforms.
                         </p>
                         
                         <!-- Tech Tags -->
                         <div class="flex flex-wrap gap-1.5 mt-4 mb-5">
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">Laravel</span>
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">PHP</span>
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">MySQL</span>
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">Tailwind</span>
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">JS</span>
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">HTML</span>
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">CSS</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">Laravel</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">PHP</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">MySQL</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">Tailwind</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">JS</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">HTML</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">CSS</span>
                         </div>
 
                         <!-- Google Drive Link Button -->
-                        <div class="mt-auto pt-4 border-t border-slate-850/60 no-print">
+                        <div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-850/60 no-print">
                             <a href="https://drive.google.com/drive/folders/1f1TCtUFikpiEFJ3B2NqxTnPj_docObRf?usp=drive_link" target="_blank" class="flex items-center justify-center gap-2 w-full px-3 py-2.5 rounded-lg bg-brand-500 text-slate-950 font-extrabold text-xs text-center uppercase tracking-wider hover:bg-brand-600 active:scale-95 transition-all duration-300">
                                 <i class="fa-brands fa-google-drive text-sm"></i> Open Portfolio
                             </a>
@@ -607,17 +609,17 @@
                 </div>
 
                 <!-- Project 2: Game Project -->
-                <div class="card-style bg-slate-900/40 border border-slate-800/85 rounded-2xl overflow-hidden hover:border-electric-500/30 transition-all duration-300 flex flex-col group hover:shadow-lg">
+                <div class="card-style bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/85 rounded-2xl overflow-hidden hover:border-electric-500/30 transition-all duration-300 flex flex-col group hover:shadow-lg">
                     <!-- Project Thumbnail Wrapper -->
                     <div class="relative h-48 bg-slate-950 overflow-hidden flex items-center justify-center">
                         
                         <!-- [USER_EDIT] Change value of src="game_thumbnail.jpg" below when image is ready -->
-                        <img src="game_thumbnail.jpg" alt="Edu-Game Ecosystem Loop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                        <img src="game_thumbnail.jpg" alt="Game Design Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                         
                         <!-- Elegant geometric fallback design -->
-                        <div class="hidden w-full h-full bg-gradient-to-br from-electric-500/10 to-slate-950 flex flex-col items-center justify-center p-6 text-center select-none">
+                        <div class="hidden w-full h-full bg-gradient-to-br from-electric-500/10 to-slate-900 dark:to-slate-950 flex flex-col items-center justify-center p-6 text-center select-none">
                             <i class="fa-solid fa-gamepad text-4xl text-electric-500/40 mb-2 animate-float"></i>
-                            <span class="font-bold text-slate-350 text-xs sm:text-sm tracking-wider font-mono">UNITY 2D ENGINE LOOP</span>
+                            <span class="font-bold text-slate-300 dark:text-slate-350 text-xs sm:text-sm tracking-wider font-mono">GAME DESIGN</span>
                         </div>
                         
                         <!-- Project Tag badge overlay -->
@@ -628,19 +630,18 @@
 
                     <!-- Project Info -->
                     <div class="p-5 flex flex-col flex-grow">
-                        <h3 class="text-base sm:text-lg font-extrabold text-slate-100 group-hover:text-electric-500 transition-colors duration-300">EcoRescue: Environmental 2D Edu-Game</h3>
-                        <p class="text-sm text-slate-300 mt-2 leading-relaxed line-clamp-3 text-justify">
-                            A 2D educational game built in Unity with C#, featuring branching dialogue, puzzle mechanics, and environmental storytelling via Ren'Py.
+                        <p class="text-sm text-slate-650 dark:text-slate-350 leading-relaxed text-justify">
+                            2D game development focusing on pixel-art Unity games and simple interactive visual novels.
                         </p>
                         
                         <!-- Tech Tags -->
                         <div class="flex flex-wrap gap-1.5 mt-4 mb-5">
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">Unity / C#</span>
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">Ren'Py</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">Unity / C#</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">Ren'Py</span>
                         </div>
 
                         <!-- Google Drive Link Button -->
-                        <div class="mt-auto pt-4 border-t border-slate-850/60 no-print">
+                        <div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-850/60 no-print">
                             <a href="https://drive.google.com/drive/folders/18faco7pVJv7QMStSyTnA73n43OGkwmMJ?usp=drive_link" target="_blank" class="flex items-center justify-center gap-2 w-full px-3 py-2.5 rounded-lg bg-electric-500 text-white font-extrabold text-xs text-center uppercase tracking-wider hover:bg-electric-600 active:scale-95 transition-all duration-300">
                                 <i class="fa-brands fa-google-drive text-sm"></i> Open Portfolio
                             </a>
@@ -649,41 +650,40 @@
                 </div>
 
                 <!-- Project 3: Videography/AI Project -->
-                <div class="card-style bg-slate-900/40 border border-slate-800/85 rounded-2xl overflow-hidden hover:border-brand-500/30 transition-all duration-300 flex flex-col group hover:shadow-lg">
+                <div class="card-style bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/85 rounded-2xl overflow-hidden hover:border-brand-500/30 transition-all duration-300 flex flex-col group hover:shadow-lg">
                     <!-- Project Thumbnail Wrapper -->
                     <div class="relative h-48 bg-slate-950 overflow-hidden flex items-center justify-center">
                         
                         <!-- [USER_EDIT] Change value of src="video_thumbnail.jpg" below when image is ready -->
-                        <img src="video_thumbnail.jpg" alt="Commercial Tech Advertisement Video" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                        <img src="video_thumbnail.jpg" alt="Videography Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                         
                         <!-- Elegant geometric fallback design -->
-                        <div class="hidden w-full h-full bg-gradient-to-br from-brand-500/10 to-slate-950 flex flex-col items-center justify-center p-6 text-center select-none">
+                        <div class="hidden w-full h-full bg-gradient-to-br from-brand-500/10 to-slate-900 dark:to-slate-950 flex flex-col items-center justify-center p-6 text-center select-none">
                             <i class="fa-solid fa-clapperboard text-4xl text-brand-500/40 mb-2 animate-float"></i>
-                            <span class="font-bold text-slate-350 text-xs sm:text-sm tracking-wider font-mono">AE/PREMIERE AI STORYBOARD</span>
+                            <span class="font-bold text-slate-300 dark:text-slate-350 text-xs sm:text-sm tracking-wider font-mono">VIDEOGRAPHY</span>
                         </div>
                         
                         <!-- Project Tag badge overlay -->
                         <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-950/80 border border-slate-850/80 text-xs font-mono font-bold tracking-wider text-brand-400 uppercase select-none">
-                            Videography & AI
+                            Videography
                         </span>
                     </div>
 
                     <!-- Project Info -->
                     <div class="p-5 flex flex-col flex-grow">
-                        <h3 class="text-base sm:text-lg font-extrabold text-slate-100 group-hover:text-brand-500 transition-colors duration-300">"Chronicles of AI": Hybrid Visual Commercial</h3>
-                        <p class="text-sm text-slate-300 mt-2 leading-relaxed line-clamp-3 text-justify">
-                            A promotional video blending camera footage with AI-generated audio, edited and color-graded in Premiere Pro and After Effects.
+                        <p class="text-sm text-slate-650 dark:text-slate-350 leading-relaxed text-justify">
+                            Videography services including cinematography, video editing, simple motion graphics, and narrative storytelling.
                         </p>
                         
                         <!-- Tech Tags -->
                         <div class="flex flex-wrap gap-1.5 mt-4 mb-5">
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">Premiere Pro</span>
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">After Effects</span>
-                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">CapCut</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">Premiere Pro</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">After Effects</span>
+                            <span class="badge-style bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-600 dark:text-slate-400">CapCut</span>
                         </div>
 
                         <!-- Google Drive Link Button -->
-                        <div class="mt-auto pt-4 border-t border-slate-850/60 no-print">
+                        <div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-850/60 no-print">
                             <a href="https://drive.google.com/drive/folders/1imDToAlfzeOn2xN6Z7WcODRT0S54oJ3F?usp=drive_link" target="_blank" class="flex items-center justify-center gap-2 w-full px-3 py-2.5 rounded-lg bg-brand-500 text-slate-950 font-extrabold text-xs text-center uppercase tracking-wider hover:bg-brand-600 active:scale-95 transition-all duration-300">
                                 <i class="fa-brands fa-google-drive text-sm"></i> Open Portfolio
                             </a>
@@ -698,15 +698,15 @@
         <!-- ==========================================
           F. CONTACT SECTION (FOOTER)
         ========================================== -->
-        <section id="contact" class="py-10 md:py-12 border-t border-slate-900">
+        <section id="contact" class="py-10 md:py-12 border-t border-slate-200 dark:border-slate-900">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 
                 <!-- Left Side Info: Closing Text -->
                 <div class="lg:col-span-5 flex flex-col items-start">
-                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-100 tracking-tight">Get In Touch</h2>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 dark:text-slate-100 tracking-tight">Get In Touch</h2>
                     <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-electric-500 rounded-full mt-3 mb-6"></div>
                     
-                    <p class="text-sm sm:text-base text-slate-400 leading-relaxed text-justify mb-6 max-w-sm">
+                    <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed text-justify mb-6 max-w-sm">
                         Thank you for visiting! I am always open to discussing new multimedia project collaborations, interactive system developments, audio-visual production, or internship/contract opportunities. Please reach out to me through any of the contacts listed on the right.
                     </p>
                     
@@ -720,57 +720,57 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         
                         <!-- Email Card -->
-                        <a href="mailto:mnaufalmuza@student.telkomuniversity.ac.id" class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
-                            <div class="w-11 h-11 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center flex-shrink-0">
+                        <a href="mailto:mnaufalmuza@student.telkomuniversity.ac.id" class="card-style bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-5 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-500 dark:text-brand-400 flex items-center justify-center flex-shrink-0">
                                 <i class="fa-solid fa-envelope text-base"></i>
                             </div>
                             <div class="min-w-0 flex-grow">
-                                <span class="block text-[10px] font-mono font-bold text-slate-450 uppercase tracking-wider">Email</span>
-                                <span class="block text-xs sm:text-sm font-bold text-slate-200 truncate" title="mnaufalmuza@student.telkomuniversity.ac.id">mnaufalmuza@student.telkomuniversity.ac.id</span>
+                                <span class="block text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Email</span>
+                                <span class="block text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 truncate" title="mnaufalmuza@student.telkomuniversity.ac.id">mnaufalmuza@student.telkomuniversity.ac.id</span>
                             </div>
                         </a>
 
                         <!-- WhatsApp Card -->
-                        <a href="https://wa.me/628112120582" target="_blank" class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-emerald-500/40 hover:shadow-md hover:shadow-emerald-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
-                            <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-450 flex items-center justify-center flex-shrink-0">
+                        <a href="https://wa.me/628112120582" target="_blank" class="card-style bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-5 hover:border-emerald-500/40 hover:shadow-md hover:shadow-emerald-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0">
                                 <i class="fa-solid fa-phone text-base"></i>
                             </div>
                             <div class="min-w-0 flex-grow">
-                                <span class="block text-[10px] font-mono font-bold text-slate-450 uppercase tracking-wider">WhatsApp</span>
-                                <span class="block text-xs sm:text-sm font-bold text-slate-200 truncate">0811-2120-582</span>
+                                <span class="block text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">WhatsApp</span>
+                                <span class="block text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 truncate">0811-2120-582</span>
                             </div>
                         </a>
 
                         <!-- Instagram Card -->
-                        <a href="https://www.instagram.com/naufal_mauzakki" target="_blank" class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-pink-500/40 hover:shadow-md hover:shadow-pink-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
-                            <div class="w-11 h-11 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 flex items-center justify-center flex-shrink-0">
+                        <a href="https://www.instagram.com/naufal_mauzakki" target="_blank" class="card-style bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-5 hover:border-pink-500/40 hover:shadow-md hover:shadow-pink-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-500 dark:text-pink-400 flex items-center justify-center flex-shrink-0">
                                 <i class="fa-brands fa-instagram text-base"></i>
                             </div>
                             <div class="min-w-0 flex-grow">
-                                <span class="block text-[10px] font-mono font-bold text-slate-450 uppercase tracking-wider">Instagram</span>
-                                <span class="block text-xs sm:text-sm font-bold text-slate-200 truncate">@naufal_mauzakki</span>
+                                <span class="block text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Instagram</span>
+                                <span class="block text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 truncate">@naufal_mauzakki</span>
                             </div>
                         </a>
 
                         <!-- LinkedIn Card -->
-                        <a href="https://www.linkedin.com/in/muhammad-naufal-muzakki-962674292/" target="_blank" class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-electric-500/40 hover:shadow-md hover:shadow-electric-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
-                            <div class="w-11 h-11 rounded-xl bg-electric-500/10 border border-electric-500/20 text-electric-450 flex items-center justify-center flex-shrink-0">
+                        <a href="https://www.linkedin.com/in/muhammad-naufal-muzakki-962674292/" target="_blank" class="card-style bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-5 hover:border-electric-500/40 hover:shadow-md hover:shadow-electric-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-electric-500/10 border border-electric-500/20 text-electric-650 dark:text-electric-400 flex items-center justify-center flex-shrink-0">
                                 <i class="fa-brands fa-linkedin-in text-base"></i>
                             </div>
                             <div class="min-w-0 flex-grow">
-                                <span class="block text-[10px] font-mono font-bold text-slate-450 uppercase tracking-wider">LinkedIn</span>
-                                <span class="block text-xs sm:text-sm font-bold text-slate-200 truncate">Muhammad Naufal Muzakki</span>
+                                <span class="block text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">LinkedIn</span>
+                                <span class="block text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 truncate">Muhammad Naufal Muzakki</span>
                             </div>
                         </a>
 
                         <!-- Domisili Card -->
-                        <div class="sm:col-span-2 card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 flex items-center gap-4">
-                            <div class="w-11 h-11 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center flex-shrink-0">
+                        <div class="sm:col-span-2 card-style bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-5 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-500 dark:text-teal-400 flex items-center justify-center flex-shrink-0">
                                 <i class="fa-solid fa-location-dot text-base"></i>
                             </div>
                             <div class="min-w-0 flex-grow">
-                                <span class="block text-[10px] font-mono font-bold text-slate-450 uppercase tracking-wider">Domisili</span>
-                                <span class="block text-xs sm:text-sm font-bold text-slate-200 leading-snug">Derwati, Rancasari, Bandung, West Java</span>
+                                <span class="block text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Location</span>
+                                <span class="block text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 leading-snug">Derwati, Rancasari, Bandung, West Java</span>
                             </div>
                         </div>
 
@@ -780,7 +780,7 @@
             </div>
 
             <!-- Simplified footer copyright -->
-            <div class="mt-12 pt-8 border-t border-slate-900 text-center text-xs font-mono text-slate-500">
+            <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-900 text-center text-xs font-mono text-slate-500">
                 <p>&copy; 2026 Muhammad Naufal Muzakki. All Rights Reserved.</p>
             </div>
         </section>
@@ -814,13 +814,13 @@
                     <!-- Screen Capture Protection Shield Overlay (Detects focus loss/blur) -->
                     <div id="protectionOverlay" class="absolute inset-0 bg-slate-950/95 backdrop-blur-lg hidden flex-col items-center justify-center text-center p-6 transition-all duration-300 z-20">
                         <i class="fa-solid fa-shield-halved text-brand-500 text-4xl mb-3 animate-pulse"></i>
-                        <h4 class="text-sm font-bold text-slate-200">Keamanan Dokumen Aktif</h4>
-                        <p class="text-xs text-slate-450 mt-1 max-w-xs">Pengambilan gambar dibatasi. Klik di sini untuk kembali menampilkan dokumen.</p>
+                        <h4 class="text-sm font-bold text-slate-200">Document Protection Active</h4>
+                        <p class="text-xs text-slate-400 mt-1 max-w-xs">Screenshots and image saving are restricted. Click here to resume viewing the document.</p>
                     </div>
                 </div>
                 <div class="mt-4 text-center">
                     <p class="text-xs text-slate-500 flex items-center justify-center gap-1.5 select-none">
-                        <i class="fa-solid fa-lock text-brand-500"></i> Proteksi Aktif: Pengunduhan, penyalinan, dan pencetakan dokumen dinonaktifkan. Gunakan scroll mouse/pad untuk membaca seluruh halaman.
+                        <i class="fa-solid fa-lock text-brand-500"></i> Protected View: Downloading, copying, and printing are disabled. Scroll mouse or touchpad to read the document.
                     </p>
                 </div>
             </div>
