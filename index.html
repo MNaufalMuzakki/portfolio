@@ -446,15 +446,18 @@
                             
                             <!-- Mini scores widget -->
                             <div class="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-slate-200 dark:border-slate-850 text-center">
-                                <a href="#" class="view-doc-btn bg-slate-50 dark:bg-slate-950 p-2.5 rounded-lg border border-slate-200 dark:border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center" data-doc="transcript" data-pages="4" data-title="Academic Transcript">
+                                <!-- [USER_EDIT] Replace link below with your secure Google Drive Academic Transcript link -->
+                                <a href="https://drive.google.com/file/d/YOUR_TRANSCRIPT_DRIVE_ID/view?usp=sharing" target="_blank" class="bg-slate-50 dark:bg-slate-950 p-2.5 rounded-lg border border-slate-200 dark:border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center">
                                     <span class="block text-sm sm:text-base font-black text-brand-650 dark:text-brand-400 group-hover:text-brand-500 transition-colors">3.95</span>
                                     <span class="text-[10px] font-mono text-slate-500 dark:text-slate-500 uppercase tracking-wider block mt-0.5">GPA</span>
                                 </a>
-                                <a href="#" class="view-doc-btn bg-slate-50 dark:bg-slate-950 p-2.5 rounded-lg border border-slate-200 dark:border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center" data-doc="eprt" data-pages="3" data-title="EPRT Certificate">
+                                <!-- [USER_EDIT] Replace link below with your secure Google Drive EPRT Certificate link -->
+                                <a href="https://drive.google.com/file/d/YOUR_EPRT_DRIVE_ID/view?usp=sharing" target="_blank" class="bg-slate-50 dark:bg-slate-950 p-2.5 rounded-lg border border-slate-200 dark:border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center">
                                     <span class="block text-sm sm:text-base font-black text-brand-650 dark:text-brand-400 group-hover:text-brand-500 transition-colors">537</span>
                                     <span class="text-[10px] font-mono text-slate-500 dark:text-slate-500 uppercase tracking-wider block mt-0.5">EPRT</span>
                                 </a>
-                                <a href="#" class="view-doc-btn bg-slate-50 dark:bg-slate-950 p-2.5 rounded-lg border border-slate-200 dark:border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center" data-doc="tak" data-pages="6" data-title="TAK Score Log">
+                                <!-- [USER_EDIT] Replace link below with your secure Google Drive TAK Score Log link -->
+                                <a href="https://drive.google.com/file/d/YOUR_TAK_DRIVE_ID/view?usp=sharing" target="_blank" class="bg-slate-50 dark:bg-slate-950 p-2.5 rounded-lg border border-slate-200 dark:border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center">
                                     <span class="block text-sm sm:text-base font-black text-brand-650 dark:text-brand-400 group-hover:text-brand-500 transition-colors">160</span>
                                     <span class="text-[10px] font-mono text-slate-500 dark:text-slate-500 uppercase tracking-wider block mt-0.5">TAK Score</span>
                                 </a>
@@ -507,7 +510,8 @@
                                     </div>
                                 </div>
                                 <div class="no-print font-sans">
-                                    <a href="#" class="view-doc-btn px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200 hover:border-brand-500/30 hover:text-brand-500 transition-all duration-300 active:scale-95 flex items-center gap-1.5" data-doc="certificate" data-pages="2" data-title="BNSP Multimedia Certificate">
+                                    <!-- [USER_EDIT] Replace link below with your secure Google Drive certificate link -->
+                                    <a href="https://drive.google.com/file/d/YOUR_BNSP_CERTIFICATE_DRIVE_ID/view?usp=sharing" target="_blank" class="px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200 hover:border-brand-500/30 hover:text-brand-500 transition-all duration-300 active:scale-95 flex items-center gap-1.5">
                                         <i class="fa-regular fa-image text-brand-500"></i> View Certificate
                                     </a>
                                 </div>
@@ -784,49 +788,6 @@
                 <p>&copy; 2026 Muhammad Naufal Muzakki. All Rights Reserved.</p>
             </div>
         </section>
-
-    </main>
-
-    <!-- Document Image Viewer Modal (Anti-Download, Anti-Save) -->
-    <div class="no-print fixed inset-0 bg-slate-950/90 backdrop-blur-md hidden items-center justify-center z-50 p-4 transition-opacity duration-300" id="docViewerModal">
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-3xl shadow-2xl overflow-hidden scale-95 opacity-0 transition-all duration-300" id="docViewerModalContent">
-            <!-- Modal Header -->
-            <div class="px-6 py-4 border-b border-slate-850 flex justify-between items-center bg-slate-900">
-                <span class="text-xs font-mono font-bold tracking-widest text-brand-500 uppercase" id="docViewerTitle">Document Preview</span>
-                <button class="text-2xl font-extrabold text-slate-400 hover:text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-800 transition-colors" id="closeDocViewerBtn">&times;</button>
-            </div>
-            <!-- Modal Body Content with image protection layer -->
-            <div class="p-6 flex flex-col items-center justify-center">
-                <!-- Outer non-scrollable wrapper (holds protection overlay in fixed view) -->
-                <div class="relative w-full h-[70vh] overflow-hidden rounded-xl border border-slate-800 bg-slate-950 select-none" id="viewerImageWrapper">
-                    
-                    <!-- Inner scrollable container -->
-                    <div class="relative w-full h-full overflow-y-auto p-4 flex flex-col items-center" id="viewerScrollContainer">
-                        <!-- Dynamically inserted page images will go here -->
-                    </div>
-                    
-                    <!-- Watermark Overlay Grid -->
-                    <div class="absolute inset-0 pointer-events-none opacity-[0.03] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px] z-10"></div>
-                    
-                    <!-- Repeating Text Watermark -->
-                    <div class="absolute inset-0 pointer-events-none opacity-[0.06] bg-repeat z-10" style="background-image: url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='250' height='180' viewBox='0 0 250 180'><text x='20' y='100' fill='%23ffffff' font-size='11' font-family='monospace' transform='rotate(-30 20 100)' font-weight='bold'>MUHAMMAD NAUFAL PORTFOLIO</text></svg>&quot;);"></div>
-                    
-                    <!-- Screen Capture Protection Shield Overlay (Detects focus loss/blur) -->
-                    <div id="protectionOverlay" class="absolute inset-0 bg-slate-950/95 backdrop-blur-lg hidden flex-col items-center justify-center text-center p-6 transition-all duration-300 z-20">
-                        <i class="fa-solid fa-shield-halved text-brand-500 text-4xl mb-3 animate-pulse"></i>
-                        <h4 class="text-sm font-bold text-slate-200">Document Protection Active</h4>
-                        <p class="text-xs text-slate-400 mt-1 max-w-xs">Screenshots and image saving are restricted. Click here to resume viewing the document.</p>
-                    </div>
-                </div>
-                <div class="mt-4 text-center">
-                    <p class="text-xs text-slate-500 flex items-center justify-center gap-1.5 select-none">
-                        <i class="fa-solid fa-lock text-brand-500"></i> Protected View: Downloading, copying, and printing are disabled. Scroll mouse or touchpad to read the document.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Link JS logic -->
     <script src="script.js"></script>

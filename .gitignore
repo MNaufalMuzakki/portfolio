@@ -9,10 +9,10 @@
 *.pdf
 
 # Converted PNG pages from PDFs
-# transcript_page_*.png
-# eprt_page_*.png
-# tak_page_*.png
-# certificate_page_*.png
+transcript_page_*.png
+eprt_page_*.png
+tak_page_*.png
+certificate_page_*.png
 
 # Optional: exclude profile photo if you prefer privacy
 # profile.jpg
