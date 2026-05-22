@@ -1,0 +1,18 @@
+# Internal tool files - do not push
+.gemini/
+
+# Exclude sensitive document files (certificates, transcripts, scores)
+# These are kept local only - not pushed to GitHub for privacy
+
+
+# PDF source files
+*.pdf
+
+# Converted PNG pages from PDFs
+transcript_page_*.png
+eprt_page_*.png
+tak_page_*.png
+certificate_page_*.png
+
+# Optional: exclude profile photo if you prefer privacy
+# profile.jpg

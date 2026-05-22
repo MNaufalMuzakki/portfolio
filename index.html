@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Naufal - Multimedia Engineer & Full-stack Developer Portfolio</title>
+    <meta name="description" content="Portfolio and CV website of Muhammad Naufal, Multimedia Engineering student at Telkom University. Specialized in Full-stack Web, Game Development, and Videography.">
+    
+    <!-- Google Fonts: Inter for high-quality text & Fira Code for code/tech fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS v3 Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // Teal
+                            600: '#0d9488',
+                            950: '#042f2e',
+                        },
+                        electric: {
+                            500: '#3b82f6', // Electric Blue
+                            600: '#2563eb',
+                            950: '#172554',
+                        },
+                        darkBg: '#090d16',
+                        darkCard: '#111827',
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        mono: ['"Fira Code"', 'monospace'],
+                    },
+                    animation: {
+                        'spin-slow': 'spin 12s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS Styles -->
+    <style type="text/css">
+        /* Floating animations for the Hero Section */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Glow background effects */
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(140px);
+            opacity: 0.12;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Customize scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090d16;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #14b8a6;
+        }
+
+        /* A4 Print Optimization for CV PDF Download */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+                font-size: 12px !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            .print-layout {
+                grid-template-cols: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .card-style {
+                background: white !important;
+                border: 1px solid #e2e8f0 !important;
+                color: black !important;
+                box-shadow: none !important;
+            }
+            .badge-style {
+                background: #f1f5f9 !important;
+                color: #0f172a !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+        }
+        /* Prevent dragging and selecting images */
+        img {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .select-none {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 dark:bg-slate-950 text-slate-200 dark:text-slate-200 min-h-screen font-sans transition-colors duration-300 relative overflow-x-hidden">
+    
+    <!-- Background Glow Orbs for Premium Vibe (Hidden in light mode via JS or Tailwind opacity check) -->
+    <div class="no-print absolute top-10 left-10 w-[300px] h-[300px] bg-brand-500 glow-orb dark:block hidden"></div>
+    <div class="no-print absolute top-[40%] right-10 w-[350px] h-[350px] bg-electric-500 glow-orb dark:block hidden"></div>
+    <div class="no-print absolute bottom-20 left-[20%] w-[300px] h-[300px] bg-brand-500 glow-orb dark:block hidden"></div>
+
+    <!-- ==========================================
+      1. HEADER / NAVIGATION BAR
+    ========================================== -->
+    <header class="no-print fixed top-0 left-0 w-full z-50 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="backdrop-blur-md bg-slate-950/70 dark:bg-slate-950/70 border border-slate-800/80 rounded-2xl px-6 py-3 flex items-center justify-between shadow-lg">
+                <!-- Brand Logo / Monogram -->
+                <a href="#hero" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-electric-500 flex items-center justify-center font-extrabold text-white text-lg shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">
+                        <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </div>
+                    <span class="font-extrabold text-sm sm:text-base tracking-wide text-slate-100 group-hover:text-brand-500 transition-colors duration-300"><span class="text-brand-500">Muhammad</span> Naufal<span class="text-brand-500"> Muzakki</span></span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#hero" class="nav-link text-sm font-semibold text-slate-350 hover:text-brand-500 transition-colors duration-300" data-section="hero">Home</a>
+                    <a href="#skills" class="nav-link text-sm font-semibold text-slate-350 hover:text-brand-500 transition-colors duration-300" data-section="skills">Skills</a>
+                    <a href="#education" class="nav-link text-sm font-semibold text-slate-350 hover:text-brand-500 transition-colors duration-300" data-section="education">Education</a>
+                    <a href="#portfolio" class="nav-link text-sm font-semibold text-slate-350 hover:text-brand-500 transition-colors duration-300" data-section="portfolio">Portfolio</a>
+                    <a href="#contact" class="nav-link text-sm font-semibold text-slate-350 hover:text-brand-500 transition-colors duration-300" data-section="contact">Contact</a>
+                </nav>
+
+                <!-- Actions: Theme Toggle & Mobile Menu Btn -->
+                <div class="flex items-center gap-3">
+                    <!-- Theme Toggle Button -->
+                    <button id="themeToggle" class="w-11 h-11 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-450 hover:text-brand-500 hover:border-brand-500/30 active:scale-95 transition-all duration-300" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon dark:hidden text-lg text-indigo-400"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-lg text-amber-400"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden w-11 h-11 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-350 hover:text-brand-500 active:scale-95 transition-all duration-300" aria-label="Open Menu">
+                        <i class="fa-solid fa-bars text-base" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu (Dropdown) -->
+        <div class="md:hidden hidden px-4 sm:px-6 mb-4" id="mobileMenu">
+            <div class="bg-slate-950/95 border border-slate-800/90 rounded-2xl p-4 flex flex-col gap-3 shadow-xl backdrop-blur-lg">
+                <a href="#hero" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-350 hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Home</a>
+                <a href="#skills" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-350 hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Skills</a>
+                <a href="#education" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-350 hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Education</a>
+                <a href="#portfolio" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-350 hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Portfolio</a>
+                <a href="#contact" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-350 hover:bg-slate-900 hover:text-brand-500 transition-all duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 relative z-10">
+
+        <!-- ==========================================
+          A. HERO SECTION (FIRST FOLD)
+        ========================================== -->
+        <section id="hero" class="py-6 md:py-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center lg:min-h-[75vh]">
+            <!-- Left Branding Info -->
+            <div class="lg:col-span-7 flex flex-col items-start text-left">
+                <!-- Mini Tag -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 text-xs font-extrabold tracking-widest uppercase mb-6 shadow-sm shadow-brand-500/5">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                    Telkom University Student
+                </div>
+
+                <!-- Headline & Titles -->
+                <h1 class="text-4xl sm:text-5xl lg:text-4xl font-black text-slate-100 tracking-tight leading-tight">
+                | <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 via-teal-400 to-electric-500">Muhammad Naufal Muzakki</span> |
+                </h1>
+                
+                <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-slate-300 mt-3 font-mono">
+                    <span class="text-brand-500">&lt;</span>
+                    Multimedia Engineering Technology Student
+                    <span class="text-brand-500">&gt;</span>
+                </h2>
+
+                <!-- Main Summary text -->
+                <p class="text-sm sm:text-base text-slate-350 mt-6 leading-relaxed max-w-2xl text-justify">
+                    A Multimedia Engineering student specializing in Web Development, Game Development, and Videography. These technical skills are enhanced by strong soft skills in teamwork, project coordination, and timeline management, proven across class projects, competitions, and leadership roles in campus organizations. This experience enables me to deliver end-to-end projects efficiently, utilizing AI tools to streamline execution. With a solid balance of system logic, user experience focus, and clear team communication, I am equipped to excel in collaborative Full-stack or Multimedia Engineer Developer roles.
+                </p>
+
+                <!-- Call To Actions -->
+                <div class="flex flex-wrap items-center gap-4 mt-8 w-full sm:w-auto">
+                    <a href="#portfolio" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-brand-500 text-slate-950 font-bold text-sm text-center hover:bg-brand-600 hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-brand-500/20 transition-all duration-300">
+                        View Portfolio <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Avatar & Orbiting Graphic -->
+            <div class="lg:col-span-5 flex justify-center items-center relative py-6">
+                <!-- Circular Avatar Wrapper with Rotating Neon Rings -->
+                <div class="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] rounded-full p-2 flex items-center justify-center">
+                    
+                    <!-- Glowing background orbits -->
+                    <div class="absolute inset-0 rounded-full border border-dashed border-slate-800/80 animate-spin-slow"></div>
+                    <div class="absolute -inset-4 rounded-full border border-dashed border-brand-500/20 animate-spin-slow" style="animation-direction: reverse; animation-duration: 20s;"></div>
+                    
+                    <!-- Neon Glow Outer Rings -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-500 to-electric-500 blur-sm opacity-60 animate-pulse-slow"></div>
+                    
+                    <!-- Avatar Image Frame -->
+                    <div class="relative w-full h-full rounded-full bg-slate-950 overflow-hidden border-4 border-slate-900 z-10 flex items-center justify-center">
+                        
+                        <!-- Profile Pic (Loads profile.jpg. Falls back to abstract design) -->
+                        <!-- [USER_EDIT] Replace profile.jpg in the workspace folder to display your face -->
+                        <img src="profile.jpg" alt="Muhammad Naufal Muzakki" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                        
+                        <!-- Stunning Fallback SVG design if no photo -->
+                        <div class="hidden w-full h-full bg-gradient-to-br from-slate-900 to-slate-950 flex flex-col items-center justify-center p-6 text-center select-none">
+                            <div class="w-16 h-16 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-user-astronaut text-3xl animate-float"></i>
+                            </div>
+                            <span class="font-extrabold text-sm sm:text-base text-slate-100 tracking-wider">MUHAMMAD NAUFAL</span>
+                            <span class="text-xs font-mono text-slate-500 uppercase mt-1">Multimedia Engineer</span>
+                        </div>
+                    </div>
+
+                    <!-- Floating Floating Tech Badges on Orbit paths -->
+                    <div class="no-print absolute top-0 right-4 w-12 h-12 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center text-brand-500 shadow-lg animate-float z-20 hover:scale-110 active:scale-95 transition-all duration-300" style="animation-delay: 0s;" title="Web Developer">
+                        <i class="fa-solid fa-code text-base"></i>
+                    </div>
+                    <div class="no-print absolute bottom-4 left-0 w-12 h-12 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center text-electric-500 shadow-lg animate-float z-20 hover:scale-110 active:scale-95 transition-all duration-300" style="animation-delay: 2s;" title="Game Developer">
+                        <i class="fa-solid fa-gamepad text-base"></i>
+                    </div>
+                    <div class="no-print absolute bottom-12 right-2 w-12 h-12 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center text-teal-400 shadow-lg animate-float z-20 hover:scale-110 active:scale-95 transition-all duration-300" style="animation-delay: 4s;" title="Videography">
+                        <i class="fa-solid fa-clapperboard text-base"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+          B. TECHNICAL SKILL STACK (HARD SKILLS)
+        ========================================== -->
+        <section id="skills" class="py-10 md:py-12 border-t border-slate-900">
+            <!-- Section Header -->
+            <div class="flex flex-col items-start mb-8">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-100 tracking-tight mt-2">Skills & Expertise</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-electric-500 rounded-full mt-3"></div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Skill Group 1: Web Development -->
+                <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 hover:border-brand-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-brand-500/5">
+                    <div class="w-11 h-11 rounded-xl bg-brand-500/10 text-brand-500 border border-brand-500/20 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-earth-americas text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-extrabold text-slate-100 uppercase tracking-wide">Web Development</h3>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 mb-5">Building responsive, secure, and database-driven web applications.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <!-- PHP -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                            <i class="fa-brands fa-php text-indigo-400 text-sm"></i> PHP
+                        </span>
+                        <!-- Laravel -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                            <i class="fa-brands fa-laravel text-red-500 text-sm"></i> Laravel
+                        </span>
+                        <!-- HTML5 -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                            <i class="fa-brands fa-html5 text-orange-500 text-sm"></i> HTML
+                        </span>
+                        <!-- CSS3 -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                            <i class="fa-brands fa-css3-alt text-blue-500 text-sm"></i> CSS
+                        </span>
+                        <!-- JS -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                            <i class="fa-brands fa-square-js text-yellow-500 text-sm"></i> JS
+                        </span>
+                        <!-- MySQL -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                            <i class="fa-solid fa-database text-blue-400 text-sm"></i> MySQL
+                        </span>
+                        <!-- PostgreSQL -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                            <i class="fa-solid fa-database text-sky-500 text-sm"></i> PostgreSQL
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Skill Group 2: Game Development -->
+                <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 hover:border-electric-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-electric-500/5">
+                    <div class="w-11 h-11 rounded-xl bg-electric-500/10 text-electric-500 border border-electric-500/20 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-gamepad text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-extrabold text-slate-100 uppercase tracking-wide">Game Development</h3>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 mb-5">Crafting engaging gameplay mechanics, interactive logic, and visual storytelling.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <!-- Unity/C# -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                            <i class="fa-brands fa-unity text-slate-100 text-sm"></i> Unity / C#
+                        </span>
+                        <!-- Ren'Py -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                            <i class="fa-solid fa-book-open text-purple-400 text-sm"></i> Ren'Py
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Skill Group 3: Multimedia & Creative -->
+                <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 hover:border-brand-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-brand-500/5">
+                    <div class="w-11 h-11 rounded-xl bg-brand-500/10 text-brand-500 border border-brand-500/20 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-photo-film text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-extrabold text-slate-100 uppercase tracking-wide">Multimedia & Creative</h3>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 mb-5">Designing premium UI/UX layouts, high-quality video production, and assets.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <!-- Premiere -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                            <i class="fa-solid fa-file-video text-purple-500 text-sm"></i> Premiere Pro
+                        </span>
+                        <!-- After Effects -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                            <i class="fa-solid fa-wand-magic-sparkles text-indigo-400 text-sm"></i> After Effects
+                        </span>
+                        <!-- CapCut -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                            <i class="fa-solid fa-video text-cyan-400 text-sm"></i> CapCut
+                        </span>
+                        <!-- Figma -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-brand-500/30 transition-all duration-300">
+                            <i class="fa-brands fa-figma text-orange-400 text-sm"></i> Figma
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Skill Group 4: Management & Supporting -->
+                <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 hover:border-electric-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-lg hover:shadow-electric-500/5">
+                    <div class="w-11 h-11 rounded-xl bg-electric-500/10 text-electric-500 border border-electric-500/20 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-extrabold text-slate-100 uppercase tracking-wide">Management & Supporting</h3>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 mb-5">Coordinating team workflows, project timelines, and utilizing supporting tools.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <!-- MS Excel -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                            <i class="fa-regular fa-file-excel text-green-600 text-sm"></i> MS Excel
+                        </span>
+                        <!-- MS Word -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                            <i class="fa-regular fa-file-word text-blue-500 text-sm"></i> MS Word
+                        </span>
+                        <!-- AI Tools -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                            <i class="fa-solid fa-robot text-teal-400 text-sm"></i> AI Tools
+                        </span>
+                        <!-- Testing -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                            <i class="fa-solid fa-bug text-red-400 text-sm"></i> Testing
+                        </span>
+                        <!-- Teamwork & Leadership -->
+                        <span class="badge-style bg-slate-950 border border-slate-850 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 flex items-center gap-1.5 select-none hover:border-electric-500/30 transition-all duration-300">
+                            <i class="fa-solid fa-users text-blue-400 text-sm"></i> Teamwork & Leadership
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+          D. EDUCATION & CERTIFICATIONS (BNSP SPOTLIGHT)
+        ========================================== -->
+        <section id="education" class="py-10 md:py-12 border-t border-slate-900">
+            <!-- Section Header -->
+            <div class="flex flex-col items-start mb-8">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-100 tracking-tight mt-2">Education & Certifications</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-electric-500 rounded-full mt-3"></div>
+            </div>
+
+            <!-- Two-Column Layout: Left for Education details, Right for Certification Spotlight -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:items-stretch items-start">
+                
+                <!-- Education details column (Left) -->
+                <div class="lg:col-span-5 flex flex-col lg:h-full">
+                    <h3 class="text-sm font-black uppercase text-slate-500 tracking-wider mb-2">Education History</h3>
+                    
+                    <div class="flex-grow flex flex-col gap-6 justify-between">
+                        <!-- Telkom University Card -->
+                        <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-brand-500/30 transition-all duration-300 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center text-sm font-black flex-shrink-0">
+                                        Tel-U
+                                    </div>
+                                    <div>
+                                        <h4 class="text-base font-extrabold text-slate-100">Telkom University</h4>
+                                        <p class="text-xs text-slate-400">Juli 2023 - Present</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-bold text-slate-200">Applied D4 Bachelor - Terapan Teknologi Rekayasa Multimedia (TRM)</p>
+                            </div>
+                            
+                            <!-- Mini scores widget -->
+                            <div class="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-slate-850 text-center">
+                                <a href="#" class="view-doc-btn bg-slate-950 p-2.5 rounded-lg border border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center" data-doc="transcript" data-pages="4" data-title="Academic Transcript">
+                                    <span class="block text-sm sm:text-base font-black text-brand-400 group-hover:text-brand-350 transition-colors">3.95</span>
+                                    <span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider block mt-0.5">GPA / IPK</span>
+                                </a>
+                                <a href="#" class="view-doc-btn bg-slate-950 p-2.5 rounded-lg border border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center" data-doc="eprt" data-pages="3" data-title="EPRT Certificate">
+                                    <span class="block text-sm sm:text-base font-black text-brand-400 group-hover:text-brand-350 transition-colors">537</span>
+                                    <span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider block mt-0.5">EPRT</span>
+                                </a>
+                                <a href="#" class="view-doc-btn bg-slate-950 p-2.5 rounded-lg border border-slate-850 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-95 transition-all duration-300 group outline-none flex flex-col items-center justify-center" data-doc="tak" data-pages="6" data-title="TAK Score Log">
+                                    <span class="block text-sm sm:text-base font-black text-brand-400 group-hover:text-brand-350 transition-colors">160</span>
+                                    <span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider block mt-0.5">TAK Score</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- High School Card -->
+                        <div class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-electric-500/30 transition-all duration-300 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="w-10 h-10 rounded-lg bg-electric-500/10 border border-electric-500/20 text-electric-500 flex items-center justify-center text-sm font-black flex-shrink-0">
+                                        HS
+                                    </div>
+                                    <div>
+                                        <h4 class="text-base font-extrabold text-slate-100">SMA Negeri 12 Bandung</h4>
+                                        <p class="text-xs text-slate-400">Juli 2020 - Mei 2023</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-bold text-slate-200">High School - MIPA Science Major</p>
+                            </div>
+                            <div class="flex items-center gap-2 mt-3 text-xs text-slate-400 font-medium">
+                                <span class="bg-slate-950 border border-slate-850 px-2.5 py-0.5 rounded text-xs font-bold text-slate-350">Final Grade: 89.81</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certification Spotlight column (Right - Section D Constraint) -->
+                <div class="lg:col-span-7 flex flex-col lg:h-full">
+                    <h3 class="text-sm font-black uppercase text-slate-500 tracking-wider mb-2">Professional Credential</h3>
+                    
+                    <!-- Spotlight Card with Neon Glow -->
+                    <div class="card-style bg-gradient-to-tr from-brand-500/10 to-electric-500/10 backdrop-blur-md border border-brand-500/20 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-brand-500/40 shadow-lg shadow-brand-500/5 flex-grow flex flex-col justify-between lg:h-[calc(100%-2rem)]">
+                        
+                        <!-- Glowing blur ball background in card -->
+                        <div class="absolute -right-8 -top-8 w-24 h-24 bg-brand-500 blur-2xl opacity-20 pointer-events-none"></div>
+                        
+                        <!-- Main Content wrapper -->
+                        <div class="flex-grow flex flex-col">
+                            <!-- Header badge/logo row -->
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between border-b border-slate-800/80 pb-5 mb-5">
+                                <div class="flex items-center gap-3">
+                                    <!-- Official Gold-looking Emblem (Constraint D) -->
+                                    <div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-amber-400 to-yellow-600 flex items-center justify-center text-slate-950 shadow-md flex-shrink-0 animate-float select-none">
+                                        <i class="fa-solid fa-award text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-mono font-bold tracking-wider text-amber-500 uppercase">OFFICIAL CERTIFICATION</h4>
+                                        <h3 class="text-base sm:text-lg font-extrabold text-slate-100 mt-0.5">BNSP Competency Certificate</h3>
+                                    </div>
+                                </div>
+                                <div class="no-print font-sans">
+                                    <a href="#" class="view-doc-btn px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold text-slate-200 hover:border-brand-500/30 hover:text-brand-500 transition-all duration-300 active:scale-95 flex items-center gap-1.5" data-doc="certificate" data-pages="2" data-title="BNSP Multimedia Certificate">
+                                        <i class="fa-regular fa-image text-brand-500"></i> View Certificate
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Certificate Body Details -->
+                            <h4 class="text-lg font-black text-slate-100 leading-snug">
+                                Desainer Multimedia Madya (Intermediate Multimedia Designer)
+                            </h4>
+                            <p class="text-sm sm:text-base font-bold text-slate-300 mt-1.5">
+                                Issued by **Badan Nasional Sertifikasi Profesi (BNSP)** through LSP Teknologi Digital.
+                            </p>
+                            <p class="text-xs font-mono text-slate-400 mt-1">
+                                Registration ID: MTM 1565 32403 2025 | Valid: July 2025 - July 2028
+                            </p>
+                            <p class="text-base text-slate-300 mt-4 leading-relaxed text-justify">
+                                This national certification officially validates proficiency in multimedia asset production, graphic editing workflows, audio-visual storytelling scripts, and operational software usage according to formal industrial frameworks.
+                            </p>
+                        </div>
+                        
+                        <!-- Competency Areas as Pill Badges -->
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950/60 border border-slate-800 text-xs font-semibold text-slate-350 hover:border-brand-500/20 transition-all duration-300 select-none">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span> Riset Kreatif & Desain
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950/60 border border-slate-800 text-xs font-semibold text-slate-350 hover:border-brand-500/20 transition-all duration-300 select-none">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span> Produksi Audio-Visual
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950/60 border border-slate-800 text-xs font-semibold text-slate-350 hover:border-brand-500/20 transition-all duration-300 select-none">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span> Pemrograman Interaktif
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+          E. PROJECTS PORTFOLIO (THE WRAPPER)
+        ========================================== -->
+        <section id="portfolio" class="py-10 md:py-12 border-t border-slate-900">
+            <!-- Section Header -->
+            <div class="mb-8">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-100 tracking-tight">Projects Portfolio</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-electric-500 rounded-full mt-3"></div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsGrid">
+                
+                <!-- Project 1: Full-stack Web -->
+                <div class="card-style bg-slate-900/40 border border-slate-800/85 rounded-2xl overflow-hidden hover:border-brand-500/30 transition-all duration-300 flex flex-col group hover:shadow-lg">
+                    <!-- Project Thumbnail Wrapper -->
+                    <div class="relative h-48 bg-slate-950 overflow-hidden flex items-center justify-center">
+                        
+                        <!-- [USER_EDIT] Change value of src="web_thumbnail.jpg" below when image is ready -->
+                        <img src="web_thumbnail.jpg" alt="Tel-U Academics Admin Portal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                        
+                        <!-- Elegant geometric fallback design -->
+                        <div class="hidden w-full h-full bg-gradient-to-br from-brand-500/10 to-slate-950 flex flex-col items-center justify-center p-6 text-center select-none">
+                            <i class="fa-solid fa-window-restore text-4xl text-brand-500/40 mb-2 animate-float"></i>
+                            <span class="font-bold text-slate-350 text-xs sm:text-sm tracking-wider font-mono">LARAVEL FULL-STACK PORTAL</span>
+                        </div>
+                        
+                        <!-- Project Tag badge overlay -->
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-950/80 border border-slate-850/80 text-xs font-mono font-bold tracking-wider text-brand-400 uppercase select-none">
+                            Web Development
+                        </span>
+                    </div>
+
+                    <!-- Project Info -->
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-base sm:text-lg font-extrabold text-slate-100 group-hover:text-brand-500 transition-colors duration-300">Room Booking & Event Scheduler Portal</h3>
+                        <p class="text-sm text-slate-300 mt-2 leading-relaxed line-clamp-3 text-justify">
+                            A full-stack web application for managing room bookings and event scheduling, built with Laravel and a relational MySQL database.
+                        </p>
+                        
+                        <!-- Tech Tags -->
+                        <div class="flex flex-wrap gap-1.5 mt-4 mb-5">
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">Laravel</span>
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">PHP</span>
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">MySQL</span>
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">Tailwind</span>
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">JS</span>
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">HTML</span>
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">CSS</span>
+                        </div>
+
+                        <!-- Google Drive Link Button -->
+                        <div class="mt-auto pt-4 border-t border-slate-850/60 no-print">
+                            <a href="https://drive.google.com/drive/folders/1f1TCtUFikpiEFJ3B2NqxTnPj_docObRf?usp=drive_link" target="_blank" class="flex items-center justify-center gap-2 w-full px-3 py-2.5 rounded-lg bg-brand-500 text-slate-950 font-extrabold text-xs text-center uppercase tracking-wider hover:bg-brand-600 active:scale-95 transition-all duration-300">
+                                <i class="fa-brands fa-google-drive text-sm"></i> Open Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Game Project -->
+                <div class="card-style bg-slate-900/40 border border-slate-800/85 rounded-2xl overflow-hidden hover:border-electric-500/30 transition-all duration-300 flex flex-col group hover:shadow-lg">
+                    <!-- Project Thumbnail Wrapper -->
+                    <div class="relative h-48 bg-slate-950 overflow-hidden flex items-center justify-center">
+                        
+                        <!-- [USER_EDIT] Change value of src="game_thumbnail.jpg" below when image is ready -->
+                        <img src="game_thumbnail.jpg" alt="Edu-Game Ecosystem Loop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                        
+                        <!-- Elegant geometric fallback design -->
+                        <div class="hidden w-full h-full bg-gradient-to-br from-electric-500/10 to-slate-950 flex flex-col items-center justify-center p-6 text-center select-none">
+                            <i class="fa-solid fa-gamepad text-4xl text-electric-500/40 mb-2 animate-float"></i>
+                            <span class="font-bold text-slate-350 text-xs sm:text-sm tracking-wider font-mono">UNITY 2D ENGINE LOOP</span>
+                        </div>
+                        
+                        <!-- Project Tag badge overlay -->
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-950/80 border border-slate-850/80 text-xs font-mono font-bold tracking-wider text-electric-500 uppercase select-none">
+                            Game Design
+                        </span>
+                    </div>
+
+                    <!-- Project Info -->
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-base sm:text-lg font-extrabold text-slate-100 group-hover:text-electric-500 transition-colors duration-300">EcoRescue: Environmental 2D Edu-Game</h3>
+                        <p class="text-sm text-slate-300 mt-2 leading-relaxed line-clamp-3 text-justify">
+                            A 2D educational game built in Unity with C#, featuring branching dialogue, puzzle mechanics, and environmental storytelling via Ren'Py.
+                        </p>
+                        
+                        <!-- Tech Tags -->
+                        <div class="flex flex-wrap gap-1.5 mt-4 mb-5">
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">Unity / C#</span>
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">Ren'Py</span>
+                        </div>
+
+                        <!-- Google Drive Link Button -->
+                        <div class="mt-auto pt-4 border-t border-slate-850/60 no-print">
+                            <a href="https://drive.google.com/drive/folders/18faco7pVJv7QMStSyTnA73n43OGkwmMJ?usp=drive_link" target="_blank" class="flex items-center justify-center gap-2 w-full px-3 py-2.5 rounded-lg bg-electric-500 text-white font-extrabold text-xs text-center uppercase tracking-wider hover:bg-electric-600 active:scale-95 transition-all duration-300">
+                                <i class="fa-brands fa-google-drive text-sm"></i> Open Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Videography/AI Project -->
+                <div class="card-style bg-slate-900/40 border border-slate-800/85 rounded-2xl overflow-hidden hover:border-brand-500/30 transition-all duration-300 flex flex-col group hover:shadow-lg">
+                    <!-- Project Thumbnail Wrapper -->
+                    <div class="relative h-48 bg-slate-950 overflow-hidden flex items-center justify-center">
+                        
+                        <!-- [USER_EDIT] Change value of src="video_thumbnail.jpg" below when image is ready -->
+                        <img src="video_thumbnail.jpg" alt="Commercial Tech Advertisement Video" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                        
+                        <!-- Elegant geometric fallback design -->
+                        <div class="hidden w-full h-full bg-gradient-to-br from-brand-500/10 to-slate-950 flex flex-col items-center justify-center p-6 text-center select-none">
+                            <i class="fa-solid fa-clapperboard text-4xl text-brand-500/40 mb-2 animate-float"></i>
+                            <span class="font-bold text-slate-350 text-xs sm:text-sm tracking-wider font-mono">AE/PREMIERE AI STORYBOARD</span>
+                        </div>
+                        
+                        <!-- Project Tag badge overlay -->
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-950/80 border border-slate-850/80 text-xs font-mono font-bold tracking-wider text-brand-400 uppercase select-none">
+                            Videography & AI
+                        </span>
+                    </div>
+
+                    <!-- Project Info -->
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-base sm:text-lg font-extrabold text-slate-100 group-hover:text-brand-500 transition-colors duration-300">"Chronicles of AI": Hybrid Visual Commercial</h3>
+                        <p class="text-sm text-slate-300 mt-2 leading-relaxed line-clamp-3 text-justify">
+                            A promotional video blending camera footage with AI-generated audio, edited and color-graded in Premiere Pro and After Effects.
+                        </p>
+                        
+                        <!-- Tech Tags -->
+                        <div class="flex flex-wrap gap-1.5 mt-4 mb-5">
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">Premiere Pro</span>
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">After Effects</span>
+                            <span class="badge-style bg-slate-950 border border-slate-850 px-2.5 py-1 rounded text-xs font-mono text-slate-400">CapCut</span>
+                        </div>
+
+                        <!-- Google Drive Link Button -->
+                        <div class="mt-auto pt-4 border-t border-slate-850/60 no-print">
+                            <a href="https://drive.google.com/drive/folders/1imDToAlfzeOn2xN6Z7WcODRT0S54oJ3F?usp=drive_link" target="_blank" class="flex items-center justify-center gap-2 w-full px-3 py-2.5 rounded-lg bg-brand-500 text-slate-950 font-extrabold text-xs text-center uppercase tracking-wider hover:bg-brand-600 active:scale-95 transition-all duration-300">
+                                <i class="fa-brands fa-google-drive text-sm"></i> Open Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+          F. CONTACT SECTION (FOOTER)
+        ========================================== -->
+        <section id="contact" class="py-10 md:py-12 border-t border-slate-900">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left Side Info: Closing Text -->
+                <div class="lg:col-span-5 flex flex-col items-start">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-100 tracking-tight">Get In Touch</h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-electric-500 rounded-full mt-3 mb-6"></div>
+                    
+                    <p class="text-sm sm:text-base text-slate-400 leading-relaxed text-justify mb-6 max-w-sm">
+                        Thank you for visiting! I am always open to discussing new multimedia project collaborations, interactive system developments, audio-visual production, or internship/contract opportunities. Please reach out to me through any of the contacts listed on the right.
+                    </p>
+                    
+                    <p class="text-xs sm:text-sm text-slate-500 italic max-w-sm">
+                        "Creating immersive digital experiences through design, development, and audio-visual precision."
+                    </p>
+                </div>
+
+                <!-- Right Side Contact Cards Grid -->
+                <div class="lg:col-span-7 w-full">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <!-- Email Card -->
+                        <a href="mailto:mnaufalmuza@student.telkomuniversity.ac.id" class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-brand-500/40 hover:shadow-md hover:shadow-brand-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-envelope text-base"></i>
+                            </div>
+                            <div class="min-w-0 flex-grow">
+                                <span class="block text-[10px] font-mono font-bold text-slate-450 uppercase tracking-wider">Email</span>
+                                <span class="block text-xs sm:text-sm font-bold text-slate-200 truncate" title="mnaufalmuza@student.telkomuniversity.ac.id">mnaufalmuza@student.telkomuniversity.ac.id</span>
+                            </div>
+                        </a>
+
+                        <!-- WhatsApp Card -->
+                        <a href="https://wa.me/628112120582" target="_blank" class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-emerald-500/40 hover:shadow-md hover:shadow-emerald-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-450 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone text-base"></i>
+                            </div>
+                            <div class="min-w-0 flex-grow">
+                                <span class="block text-[10px] font-mono font-bold text-slate-450 uppercase tracking-wider">WhatsApp</span>
+                                <span class="block text-xs sm:text-sm font-bold text-slate-200 truncate">0811-2120-582</span>
+                            </div>
+                        </a>
+
+                        <!-- Instagram Card -->
+                        <a href="https://www.instagram.com/naufal_mauzakki" target="_blank" class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-pink-500/40 hover:shadow-md hover:shadow-pink-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-brands fa-instagram text-base"></i>
+                            </div>
+                            <div class="min-w-0 flex-grow">
+                                <span class="block text-[10px] font-mono font-bold text-slate-450 uppercase tracking-wider">Instagram</span>
+                                <span class="block text-xs sm:text-sm font-bold text-slate-200 truncate">@naufal_mauzakki</span>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn Card -->
+                        <a href="https://www.linkedin.com/in/muhammad-naufal-muzakki-962674292/" target="_blank" class="card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 hover:border-electric-500/40 hover:shadow-md hover:shadow-electric-500/5 active:scale-[0.98] transition-all duration-300 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-electric-500/10 border border-electric-500/20 text-electric-450 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-brands fa-linkedin-in text-base"></i>
+                            </div>
+                            <div class="min-w-0 flex-grow">
+                                <span class="block text-[10px] font-mono font-bold text-slate-450 uppercase tracking-wider">LinkedIn</span>
+                                <span class="block text-xs sm:text-sm font-bold text-slate-200 truncate">Muhammad Naufal Muzakki</span>
+                            </div>
+                        </a>
+
+                        <!-- Domisili Card -->
+                        <div class="sm:col-span-2 card-style bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-5 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-base"></i>
+                            </div>
+                            <div class="min-w-0 flex-grow">
+                                <span class="block text-[10px] font-mono font-bold text-slate-450 uppercase tracking-wider">Domisili</span>
+                                <span class="block text-xs sm:text-sm font-bold text-slate-200 leading-snug">Derwati, Rancasari, Bandung, West Java</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Simplified footer copyright -->
+            <div class="mt-12 pt-8 border-t border-slate-900 text-center text-xs font-mono text-slate-500">
+                <p>&copy; 2026 Muhammad Naufal Muzakki. All Rights Reserved.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Document Image Viewer Modal (Anti-Download, Anti-Save) -->
+    <div class="no-print fixed inset-0 bg-slate-950/90 backdrop-blur-md hidden items-center justify-center z-50 p-4 transition-opacity duration-300" id="docViewerModal">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-3xl shadow-2xl overflow-hidden scale-95 opacity-0 transition-all duration-300" id="docViewerModalContent">
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-850 flex justify-between items-center bg-slate-900">
+                <span class="text-xs font-mono font-bold tracking-widest text-brand-500 uppercase" id="docViewerTitle">Document Preview</span>
+                <button class="text-2xl font-extrabold text-slate-400 hover:text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-800 transition-colors" id="closeDocViewerBtn">&times;</button>
+            </div>
+            <!-- Modal Body Content with image protection layer -->
+            <div class="p-6 flex flex-col items-center justify-center">
+                <!-- Outer non-scrollable wrapper (holds protection overlay in fixed view) -->
+                <div class="relative w-full h-[70vh] overflow-hidden rounded-xl border border-slate-800 bg-slate-950 select-none" id="viewerImageWrapper">
+                    
+                    <!-- Inner scrollable container -->
+                    <div class="relative w-full h-full overflow-y-auto p-4 flex flex-col items-center" id="viewerScrollContainer">
+                        <!-- Dynamically inserted page images will go here -->
+                    </div>
+                    
+                    <!-- Watermark Overlay Grid -->
+                    <div class="absolute inset-0 pointer-events-none opacity-[0.03] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px] z-10"></div>
+                    
+                    <!-- Repeating Text Watermark -->
+                    <div class="absolute inset-0 pointer-events-none opacity-[0.06] bg-repeat z-10" style="background-image: url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='250' height='180' viewBox='0 0 250 180'><text x='20' y='100' fill='%23ffffff' font-size='11' font-family='monospace' transform='rotate(-30 20 100)' font-weight='bold'>MUHAMMAD NAUFAL PORTFOLIO</text></svg>&quot;);"></div>
+                    
+                    <!-- Screen Capture Protection Shield Overlay (Detects focus loss/blur) -->
+                    <div id="protectionOverlay" class="absolute inset-0 bg-slate-950/95 backdrop-blur-lg hidden flex-col items-center justify-center text-center p-6 transition-all duration-300 z-20">
+                        <i class="fa-solid fa-shield-halved text-brand-500 text-4xl mb-3 animate-pulse"></i>
+                        <h4 class="text-sm font-bold text-slate-200">Keamanan Dokumen Aktif</h4>
+                        <p class="text-xs text-slate-450 mt-1 max-w-xs">Pengambilan gambar dibatasi. Klik di sini untuk kembali menampilkan dokumen.</p>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <p class="text-xs text-slate-500 flex items-center justify-center gap-1.5 select-none">
+                        <i class="fa-solid fa-lock text-brand-500"></i> Proteksi Aktif: Pengunduhan, penyalinan, dan pencetakan dokumen dinonaktifkan. Gunakan scroll mouse/pad untuk membaca seluruh halaman.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Link JS logic -->
+    <script src="script.js"></script>
+</body>
+</html>
