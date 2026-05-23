@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
 
-    // Action Triggers
-    const downloadCVBtn = document.getElementById('downloadCV');
+
 
 
     // ==========================================
@@ -104,17 +103,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+
     // ==========================================
-    // 8. PRINT TRIGGER (DOWNLOAD CV ACTION)
+    // 9. COPY EMAIL TO CLIPBOARD
     // ==========================================
-    if (downloadCVBtn) {
-        downloadCVBtn.addEventListener('click', () => {
-            window.print();
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            navigator.clipboard.writeText('mnaufalmuza@student.telkomuniversity.ac.id')
+                .then(() => {
+                    const icon = document.getElementById('copyEmailIcon');
+                    icon.className = 'fa-solid fa-check text-emerald-500 text-xs';
+                    setTimeout(() => {
+                        icon.className = 'fa-regular fa-copy text-xs';
+                    }, 2000);
+                });
         });
     }
 
 
-
+    // ==========================================
+    // 10. SCROLL TO TOP BUTTON
+    // ==========================================
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    if (scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                scrollToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                scrollToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+            }
+        });
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
 });
 
